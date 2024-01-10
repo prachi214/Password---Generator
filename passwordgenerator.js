@@ -102,7 +102,8 @@ copyEle.addEventListener("click", () => {
     textarea.value = password;
       document.body.appendChild(textarea);
     textarea.select();
-    document.execCommand('copyEle');
-    textarea.remove();
+        textarea.setSelectionRange(0,30);
+    navigator.clipboard.writeText(textarea.value);
+
     alert('Password copied to clipboard');
 });
