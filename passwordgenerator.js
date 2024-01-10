@@ -99,7 +99,8 @@ copyEle.addEventListener("click", () => {
     if (!password) {
         return;
     }
-    textarea.value = password
+    textarea.value = password;
+      document.body.appendChild(textarea);
     textarea.select();
     document.execCommand('copyEle');
     textarea.remove();
