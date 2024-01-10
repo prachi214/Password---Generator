@@ -106,4 +106,5 @@ copyEle.addEventListener("click", () => {
     navigator.clipboard.writeText(textarea.value);
 
     alert('Password copied to clipboard');
+     document.body.removeChild(textarea);
 });
